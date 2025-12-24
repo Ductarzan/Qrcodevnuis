@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Design Studio - VNUIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Left Panel: Controls -->
+        <div class="control-panel">
+            <div class="panel-header">
+                <div class="brand">
+                    <img src="assets/header-logo.png" alt="VNUIS Logo" class="brand-logo">
+                    <div class="brand-text">
+                        <h1>QR DESIGN STUDIO</h1>
+                        <p>VNU INTERNATIONAL SCHOOL</p>
+                        <div class="user-counter">
+                            <i class="fas fa-user-check"></i>
+                            <span id="user-count">10</span> lượt đã tạo
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.is.vnu.edu.vn/" target="_blank" class="btn-home">
+                    <i class="fas fa-home"></i> TRANG CHỦ
+                </a>
+            </div>
+
+            <div class="panel-content">
+                <div class="tabs">
+                    <button class="tab active" data-tab="content">
+                        <i class="fas fa-link"></i> NỘI DUNG
+                    </button>
+                    <button class="tab" data-tab="design">
+                        <i class="fas fa-paint-brush"></i> GIAO DIỆN
+                    </button>
+                </div>
+
+                <div id="content-tab" class="tab-content active">
+                    <div class="input-group">
+                        <label>ĐƯỜNG DẪN TÀI LIỆU / WEBSITE</label>
+                        <input type="text" id="qr-content" placeholder="https://www.is.vnu.edu.vn/"
+                            value="https://www.is.vnu.edu.vn/">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label>TIÊU ĐỀ CARD</label>
+                            <span class="ai-badge"><i class="fas fa-magic"></i> AI GỢI Ý</span>
+                        </div>
+                        <input type="text" id="card-title" placeholder="Nhập tiêu đề..." value="Trường Quốc tế, ĐHQGHN">
+                    </div>
+
+                    <div class="input-group">
+                        <label>MÔ TẢ NGẮN (IN DƯỚI QR)</label>
+                        <input type="text" id="card-desc" placeholder="Nhập mô tả..."
+                            value="VNU - International School">
+                    </div>
+
+                    <button id="generate-btn" class="btn-primary">
+                        <i class="fas fa-qrcode"></i> TẠO QR CODE
+                    </button>
+                </div>
+
+                <div id="design-tab" class="tab-content">
+                    <div class="style-section">
+                        <h3>MÀU SẮC</h3>
+                        <div class="color-inputs">
+                            <div class="color-input-wrapper">
+                                <label>MÀU CHẤM</label>
+                                <div class="color-picker-container">
+                                    <input type="color" id="color-dots" value="#002060">
+                                    <span class="color-value">#002060</span>
+                                </div>
+                            </div>
+                            <div class="color-input-wrapper">
+                                <label>MÀU NỀN</label>
+                                <div class="color-picker-container">
+                                    <input type="color" id="color-bg" value="#ffffff">
+                                    <span class="color-value">#ffffff</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="style-section">
+                        <h3>KIỂU DÁNG</h3>
+                        <div class="style-inputs">
+                            <div class="select-wrapper">
+                                <label>KIỂU CHẤM</label>
+                                <select id="dots-type">
+                                    <option value="rounded">Bo tròn (Rounded)</option>
+                                    <option value="dots">Chấm tròn (Dots)</option>
+                                    <option value="classy">Cổ điển (Classy)</option>
+                                    <option value="classy-rounded">Cổ điển tròn (Classy Rounded)</option>
+                                    <option value="square">Vuông (Square)</option>
+                                    <option value="extra-rounded">Siêu bo tròn (Extra Rounded)</option>
+                                </select>
+                            </div>
+                            <div class="select-wrapper">
+                                <label>GÓC VUÔNG</label>
+                                <select id="corners-type">
+                                    <option value="extra-rounded">Siêu bo tròn</option>
+                                    <option value="dot">Chấm tròn</option>
+                                    <option value="square">Vuông</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.is.vnu.edu.vn/" target="_blank" class="btn-home">
+                    <i class="fas fa-home"></i> TRANG CHỦ
+                </a>
+
+                <div class="branding-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="badge-text">
+                        <h3>XÁC LẬP QUYỀN SỞ HỮU TRÍ TUỆ</h3>
+                        <p>Nhãn hiệu Logo Trường Quốc tế - ĐHQGHN đã được Cục Sở hữu trí tuệ cấp Văn bằng bảo hộ độc
+                            quyền (GCN số 481792).</p>
+                        <p>Mã QR này là cơ sở pháp lý để xác thực nguồn gốc chính danh và bảo vệ giá trị thương hiệu
+                            trên mọi văn bản ban hành.</p>
+                        <div class="badge-footer">
+                            Sản phẩm do Phòng Truyền thông & Tuyển sinh, Trường Quốc tế - ĐHQGHN phát triển
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.is.vnu.edu.vn/" target="_blank" class="btn-home">
+                    <i class="fas fa-home"></i> TRANG CHỦ
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Panel: Preview -->
+        <div class="preview-panel">
+            <div class="preview-container">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <div class="school-name">TRƯỜNG QUỐC TẾ, ĐHQGHN</div>
+                            <div class="school-sub">VNU - INTERNATIONAL SCHOOL</div>
+                        </div>
+
+                        <div class="qr-card">
+                            <div id="canvas"></div>
+                            <div class="card-footer">
+                                <h3 id="preview-title">TRƯỜNG QUỐC TẾ, ĐHQGHN</h3>
+                                <div class="divider"></div>
+                                <p id="preview-desc">"VNU - International School"</p>
+                            </div>
+                        </div>
+
+                        <div class="watermark">POWERED BY VNUIS</div>
+                    </div>
+                </div>
+
+                <div class="action-bar">
+                    <button id="download-btn" class="btn-download">
+                        <i class="fas fa-download"></i> TẢI XUỐNG FILE IN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
