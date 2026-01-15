@@ -208,7 +208,7 @@ const initUserCounter = () => {
     if (!counterElement) return;
 
     // Start with a base number
-    let count = 10;
+    let count = 311;
     counterElement.innerText = count.toLocaleString('en-US');
 
     // Simulate live updates
@@ -228,3 +228,4 @@ const initUserCounter = () => {
 };
 
 initUserCounter();
+
